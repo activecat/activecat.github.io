@@ -17,6 +17,45 @@
     h6 {
         font-family: "Roboto", sans-serif
     }
+
+    .tooltip {
+        position: relative;
+        display: inline-block;
+        border-bottom: 1px dotted black;
+    }
+
+    .tooltip .tooltiptext {
+        visibility: hidden;
+        width: 120px;
+        background-color: #555;
+        color: #fff;
+        text-align: center;
+        border-radius: 6px;
+        padding: 5px 0;
+        position: absolute;
+        z-index: 1;
+        bottom: 125%;
+        left: 50%;
+        margin-left: -60px;
+        opacity: 0;
+        transition: opacity 0.3s;
+    }
+
+    .tooltip .tooltiptext::after {
+        content: "";
+        position: absolute;
+        top: 100%;
+        left: 50%;
+        margin-left: -5px;
+        border-width: 5px;
+        border-style: solid;
+        border-color: #555 transparent transparent transparent;
+    }
+
+    .tooltip:hover .tooltiptext {
+        visibility: visible;
+        opacity: 1;
+    }
 </style>
 
 <body class="w3-light-grey">
@@ -91,7 +130,8 @@
                     <div class="w3-container">
                         <h5 class="w3-opacity"><b>My Facebook Group</b></h5>
                         <p>I have created and now growing the FB Group: <a
-                                href="https://web.facebook.com/groups/softwareskill">Python Essential Logics</a>.</p>
+                                href="https://web.facebook.com/groups/softwareskill"><b>Python Essential Logics</b></a>.
+                        </p>
                         <p>The purpose of this group is to provide eduation on <a
                                 href="https://www.python.org/">Python</a> via Facebook.
                             500 members have joined this group at the first 3 months and it continue to grow.
@@ -100,41 +140,46 @@
                     </div>
                     <div class="w3-container">
                         <h5 class="w3-opacity"><b>My Github</b></h5>
-                        <p><a
+                        <div style="padding-left: 0.5em; text-indent: -0.5em;">
+                            <a
                                 href="https://github.com/activecat/jupyter-notebook">https://github.com/activecat/jupyter-notebook</a><br>
-                            I share Python scripts for education purpose, helping people to learn Python and enhance
+                            I share Python scripts for <b>education</b> purpose, helping people to learn Python and
+                            enhance
                             their understanding in essential logics.
-                        </p>
-                        <p><a
-                                href="https://github.com/activecat/dating-website-django">https://github.com/activecat/dating-website-django</a>
-                            <br>
+                        </div><br>
+                        <div style="padding-left: 0.5em; text-indent: -0.5em;">
+                            <a
+                                href="https://github.com/activecat/dating-website-django">https://github.com/activecat/dating-website-django</a><br>
                             I create an open source project, calling the coders worldwide to together build a dating
                             website.
-                        </p>
-                        <p><a href="https://github.com/activecat/gnuradio">https://github.com/activecat/gnuradio</a>
-                            <br>
-                            I share my works in GNU Radio during my post-graduate research.
-                        </p>
-                        <p><a href="https://github.com/activecat/gr-test1">https://github.com/activecat/gr-test1</a>
-                            <br>
+                        </div><br>
+                        <div style="padding-left: 0.5em; text-indent: -0.5em;">
+                            <a
+                                href="https://github.com/activecat/gnuradio">https://github.com/activecat/gnuradio</a><br>
+                            I share my works in <b>GNU Radio</b> during my post-graduate research.
+                        </div><br>
+                        <div style="padding-left: 0.5em; text-indent: -0.5em;">
+                            <a
+                                href="https://github.com/activecat/gr-test1">https://github.com/activecat/gr-test1</a><br>
                             I share some examples to explain some concepts of GNU Radio.
-                        </p>
-                        <p><a
-                                href="https://github.com/activecat/travelbee_golang">https://github.com/activecat/travelbee_golang</a>
-                            <br>
-                            I share my source code of RESTFUL API written in Go.
-                        </p>
-                        <p><a
-                                href="https://github.com/activecat/travelbee-android">https://github.com/activecat/travelbee-android</a>
-                            <br>
-                            I share my source code of Travelbee Android app written in Java 8.
-                        </p>
+                        </div><br>
+                        <div style="padding-left: 0.5em; text-indent: -0.5em;">
+                            <a
+                                href="https://github.com/activecat/travelbee_golang">https://github.com/activecat/travelbee_golang</a><br>
+                            I share my source code of <b>RESTful API</b> written in Go.
+                        </div><br>
+                        <div style="padding-left: 0.5em; text-indent: -0.5em;">
+                            <a
+                                href="https://github.com/activecat/travelbee-android">https://github.com/activecat/travelbee-android</a><br>
+                            I share my source code of Travelbee <b>Android app</b> written in Java 8.
+                        </div>
                         <hr>
                     </div>
                     <div class="w3-container">
                         <h5 class="w3-opacity"><b>Public Speaking</b></h5>
-                        <p>As a member of <a href="https://www.toastmasters.org/">Toastmasters International</a>, I have
-                            earned a title of Competent Communicator.</p>
+                        <p>As a member of <a href="https://www.toastmasters.org/">Toastmasters International</a>, I
+                            have
+                            earned a title of <b>Competent Communicator</b> (CC).</p>
                         <hr>
                     </div>
                     <div class="w3-container">
@@ -165,8 +210,13 @@
                     </div>
                     <div class="w3-container">
                         <h5 class="w3-opacity"><b>Golang</b></h5>
-                        <p>I was using <a href="https://golang.org/">Go</a> to build the back-end RESTful API of the TravelBee.
-                            This project has 15K LOC (Line Of Code).</p>
+                        <p>I was using <a href="https://golang.org/">Go</a> to build the back-end RESTful API of the
+                            TravelBee.
+                            This project has 15K
+                            <span class="tooltip">LOC
+                                <span class="tooltiptext">Line Of Code</span>
+                            </span>.
+                        </p>
                         <hr>
                     </div>
                     <div class="w3-container">
@@ -175,7 +225,11 @@
                             Python, Java, Go, JavaScript and C++.
                         <p>Below are examples of my projects:</p>
                         <ul>
-                            <li><b>Java:</b>&nbsp; Android native app, 12K LOC</li>
+                            <li><b>Java:</b>&nbsp; Android native app, 12K
+                                <span class="tooltip">LOC
+                                    <span class="tooltiptext">Line Of Code</span>
+                                </span>.
+                            </li>
                             <li><b>Go:</b>&nbsp; RESTful API (backend) with 15K LOC</li>
                             <li><b>Python:</b>&nbsp; Varous small projects which sum up probably 50K LOC.</li>
                             <li><b>C++:</b>&nbsp; Various small projects which sum up 10K LOC.</li>
@@ -231,15 +285,18 @@
                 <div class="w3-container w3-card w3-white">
                     <h2 class="w3-margin-left w3-text-grey w3-padding-16">Education</h2>
                     <div class="w3-container">
-                        <h5 class="w3-opacity"><b>Multimedia University of Malaysia (MMU)</b></h5>
-                        <h6 class="w3-text-teal"><i class="fa fa-calendar fa-fw w3-margin-right"></i>2013 - 2015</h6>
-                        <p>Master of Engineering Science</p>
+                        <p><b>Master of Engineering Science</b></p>
+                        <h5 class="w3-opacity"><a href="https://www.mmu.edu.my/"><b>Multimedia University</b></a>&nbsp;
+                            (MMU)</h5>
+                        <h6 class="w3-text-teal"><i class="fa fa-calendar fa-fw w3-margin-right"></i>2013 - 2015
+                        </h6>
                         <hr>
                     </div>
                     <div class="w3-container">
-                        <h5 class="w3-opacity"><b>University of Malaya</b></h5>
+                        <p><b>Bachelor of Engineering</b></p>
+                        <h5 class="w3-opacity"><a href="https://www.um.edu.my/"><b>Universiti Malaya</b></a>&nbsp; (UM)
+                        </h5>
                         <h6 class="w3-text-teal"><i class="fa fa-calendar fa-fw w3-margin-right"></i>1993 - 1997</h6>
-                        <p>Bachelor of Engineering</p><br>
                     </div>
                 </div>
 
